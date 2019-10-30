@@ -1,7 +1,7 @@
 {
-  "name": "handcustomcode",
+  "name": "akos-handcustomcode",
   "version": "0.0.1",
-  "description": "hand custom formatting return",
+  "description": "hand custom formatting return for akos",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
