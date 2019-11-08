@@ -1,6 +1,6 @@
 {
   "name": "akos-handcustomcode",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "hand custom formatting return for akos",
   "main": "index.js",
   "scripts": {

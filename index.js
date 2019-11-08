@@ -94,7 +94,7 @@ module.exports = function (app, option) {
                 code,
                 result: content,
             };
-        else if (code === 406 || code === 401) {
+        else if (code >= 400 && code< 500) {
             this.status = code;
             this.body = {
                 code,
