@@ -1,5 +1,6 @@
 const assert = require('assert');
 const is = require('is-type-of');
+const os = require('os');
 const debug = require('debug')('akos:server:extension:handleCustomCode');
 const createEnum = require('./lib/enum.js').createEnum
 
@@ -8,6 +9,7 @@ module.exports = function (app, option) {
     const key = '_code';
     const  ResponseCode = createEnum(option. ResponseCode)|| require('./lib/enum.js').ResponseCode;
     let requestId = '';
+    const machine = os.hostname();
     app.use(async function (ctx, next) {
         try {
             requestId = ctx.reqId;
@@ -118,5 +120,8 @@ module.exports = function (app, option) {
         }
         if (option && option.requestId === true)
             this.body.requestId = requestId;
+        if(option && option.machine === true)
+            this.body.machine = machine;
+
     }
 };
